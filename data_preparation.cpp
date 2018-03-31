@@ -18,7 +18,6 @@ int main() {
 	EC_GROUP *group;
 	EC_KEY *eckey = EC_KEY_new();
 	EC_POINT *P;
-
 	BN_CTX *ctx = BN_CTX_new();
 	BIGNUM *x = BN_new();
 	BIGNUM *n = BN_new();  // начало последовательности точек кривой
