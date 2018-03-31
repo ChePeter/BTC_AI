@@ -57,26 +57,6 @@ int main() {
 
 	EC_GROUP_precompute_mult(group, ctx);
 
-	if (!EC_KEY_generate_key(eckey)) {
-		cout << "ABORT4 ";
-		ERR_error_string(ERR_get_error(), e_buf);
-		cout << "E_BUF " << e_buf << endl;
-	}
-
-	const EC_POINT *pubkey = EC_KEY_get0_public_key(eckey);
-	if (pubkey == NULL) {
-		cout << "ABORT5 ";
-		ERR_error_string(ERR_get_error(), e_buf);
-		cout << "E_BUF " << e_buf << endl;
-	}
-
-	const EC_POINT *G = EC_GROUP_get0_generator(group);
-	if (G == NULL) {
-		cout << "ABORT6 ";
-		ERR_error_string(ERR_get_error(), e_buf);
-		cout << "E_BUF " << e_buf << endl;
-	}
-
 	P = EC_POINT_new(group);
 
 	BN_rand(n, bits, BN_RAND_TOP_ONE, BN_RAND_BOTTOM_ANY);
