@@ -1,7 +1,7 @@
 
 PM_rand_600_t.bin  - random sequence
 
-data_preparation.cpp - preparation and shuffle of data
+data_preparation.cpp - preparation and shuffle data
 
 dieharder_rand.txt - dieharder test of PM_rand_t.bin. dieharder -f PM_rand_600.bin -g 201 -a > dieharder_rand.txt
 
